@@ -30,7 +30,7 @@ function Navbar() {
 const [open, setOpen]=useState(false)
 
   return (
-    <AppBar position='sticky'>
+    <AppBar position='sticky' sx={{bgcolor:'#51897B'}}>
       <StyledToolbar>
           <Typography variant='h6' sx={{display: {xs:'none', sm:'block'}}}>
               ASEL WILL

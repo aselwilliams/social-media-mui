@@ -1,10 +1,11 @@
-import { AccountBox, Article, Diversity2, Group, Home, Inbox, ModeNight, SettingsSuggest, Storefront } from '@mui/icons-material'
+import { AccountBox, Article, Diversity2, Group, Home, ModeNight, SettingsSuggest, Storefront } from '@mui/icons-material'
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 
 function Sidebar() {
   return (
-    <Box p={2} flex={1} sx={{display: { xs:'none', sm: 'block'}}}>
+    <Box bgcolor='#C4D7D2' p={2} flex={1} sx={{display: { xs:'none', sm: 'block'}}}>
+        <Box  position='fixed'>
          <List >
           <ListItem disablePadding>
             <ListItemButton component='a' href='#home'>
@@ -71,6 +72,7 @@ function Sidebar() {
             </ListItemButton>
           </ListItem>
           </List>
+        </Box>
     </Box>
   )
 }
