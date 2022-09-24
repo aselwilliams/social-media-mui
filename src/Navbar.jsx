@@ -44,10 +44,10 @@ const [open, setOpen]=useState(false)
             <Badge badgeContent={6} color="error">
             <Notifications />
             </Badge>
-            <Avatar onClick={(e)=>setOpen(true)} src='https://images.pexels.com/photos/2340978/pexels-photo-2340978.jpeg?auto=compress&cs=tinysrgb&w=1600' sx={{width:'30px', height:'30px'}}/>
+            <Avatar onClick={(e)=>setOpen(true)} src='https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' sx={{width:'30px', height:'30px'}}/>
           </Icons>
           <UserBox onClick={e=>setOpen(true)}>
-          <Avatar src='https://images.pexels.com/photos/2340978/pexels-photo-2340978.jpeg?auto=compress&cs=tinysrgb&w=1600' sx={{width:'30px', height:'30px'}}/>
+          <Avatar src='https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' sx={{width:'30px', height:'30px'}}/>
           <Typography variant='span'>Chris</Typography>
           </UserBox>
       </StyledToolbar>
