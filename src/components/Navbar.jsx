@@ -33,7 +33,7 @@ const [open, setOpen]=useState(false)
     <AppBar position='sticky' sx={{bgcolor:'#51897B'}}>
       <StyledToolbar>
           <Typography variant='h6' sx={{display: {xs:'none', sm:'block'}}}>
-              ASEL WILL
+              Bee Hive
           </Typography>
           <Hive sx={{display: {xs:'block', sm:'none'}}}/>
           <Search><InputBase placeholder='search...'/></Search>
@@ -48,7 +48,7 @@ const [open, setOpen]=useState(false)
           </Icons>
           <UserBox onClick={e=>setOpen(true)}>
           <Avatar src='https://images.pexels.com/photos/3775156/pexels-photo-3775156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' sx={{width:'30px', height:'30px'}}/>
-          <Typography variant='span'>Chris</Typography>
+          <Typography variant='span'>Asel</Typography>
           </UserBox>
       </StyledToolbar>
       <Menu

@@ -2,9 +2,9 @@ import { AccountBox, Article, Diversity2, Group, Home, ModeNight, SettingsSugges
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
 import React from 'react'
 
-function Sidebar() {
+function Sidebar({mode, setMode}) {
   return (
-    <Box bgcolor='#C4D7D2' p={2} flex={1} sx={{display: { xs:'none', sm: 'block'}}}>
+    <Box bgcolor={mode==='light' ? '#C4D7D2' : 'background.default'} p={2} flex={1} sx={{display: { xs:'none', sm: 'block'}}}>
         <Box  position='fixed'>
          <List >
           <ListItem disablePadding>
@@ -68,7 +68,7 @@ function Sidebar() {
               <ListItemIcon>
                 <ModeNight/>
               </ListItemIcon>
-             <Switch />
+             <Switch onChange={(e)=>setMode(mode==='light' ? 'dark' : 'light')}/>
             </ListItemButton>
           </ListItem>
           </List>
