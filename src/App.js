@@ -1,5 +1,5 @@
-import { ThemeProvider,createTheme } from '@mui/material/styles';
-import {Box, Stack } from "@mui/system";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Box, Stack } from "@mui/system";
 import { useState } from "react";
 import AddPost from "./components/AddPost";
 import Feed from "./components/Feed";
@@ -8,21 +8,21 @@ import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-const [mode, setMode]= useState('dark')
+  const [mode, setMode] = useState("light");
 
-  const darkTheme=createTheme({
+  const darkTheme = createTheme({
     palette: {
-      mode:mode
-    }
-  })
+      mode: mode,
+    },
+  });
   return (
-    <ThemeProvider theme={darkTheme} >
-      <Box bgcolor={'background.default'} color={'text.primary'}>
+    <ThemeProvider theme={darkTheme}>
+      <Box bgcolor={"background.default"} color={"text.primary"}>
         <Navbar />
-        <Stack direction='row' spacing={2} justifyContent='space-between'>
-        <Sidebar setMode={setMode} mode={mode} />
-        <Feed />
-        <Rightbar mode={mode}/>
+        <Stack direction="row" spacing={2} justifyContent="space-between">
+          <Sidebar setMode={setMode} mode={mode} />
+          <Feed />
+          <Rightbar mode={mode} />
         </Stack>
         <AddPost />
       </Box>

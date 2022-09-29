@@ -1,80 +1,104 @@
-import { AccountBox, Article, Diversity2, Group, Home, ModeNight, SettingsSuggest, Storefront } from '@mui/icons-material'
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
-import React from 'react'
+import {
+  AccountBox,
+  Article,
+  Diversity2,
+  Group,
+  Home,
+  ModeNight,
+  SettingsSuggest,
+  Storefront,
+} from "@mui/icons-material";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from "@mui/material";
+import React from "react";
 
-function Sidebar({mode, setMode}) {
+function Sidebar({ mode, setMode }) {
   return (
-    <Box bgcolor={mode==='light' ? '#C4D7D2' : 'background.default'} p={2} flex={1} sx={{display: { xs:'none', sm: 'block'}}}>
-        <Box  position='fixed'>
-         <List >
+    <Box
+      bgcolor={mode === "light" ? "#C4D7D2" : "background.default"}
+      p={2}
+      flex={1}
+      sx={{ display: { xs: "none", sm: "block" } }}
+    >
+      <Box position="fixed">
+        <List>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <Home/>
+                <Home />
               </ListItemIcon>
               <ListItemText primary="Homepage" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <Article/>
+                <Article />
               </ListItemIcon>
               <ListItemText primary="Pages" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <Group/>
+                <Group />
               </ListItemIcon>
               <ListItemText primary="Groups" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <Storefront/>
+                <Storefront />
               </ListItemIcon>
               <ListItemText primary="Marketplace" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <Diversity2/>
+                <Diversity2 />
               </ListItemIcon>
               <ListItemText primary="Friends" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <AccountBox/>
+                <AccountBox />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <SettingsSuggest/>
+                <SettingsSuggest />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='#home'>
+            <ListItemButton component="a" href="#home">
               <ListItemIcon>
-                <ModeNight/>
+                <ModeNight />
               </ListItemIcon>
-             <Switch onChange={(e)=>setMode(mode==='light' ? 'dark' : 'light')}/>
+              <Switch
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
-          </List>
-        </Box>
+        </List>
+      </Box>
     </Box>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
